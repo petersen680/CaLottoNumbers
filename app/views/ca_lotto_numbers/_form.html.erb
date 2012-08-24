@@ -1,0 +1,25 @@
+<%= form_for(@ca_lotto_number) do |f| %>
+  <% if @ca_lotto_number.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ca_lotto_number.errors.count, "error") %> prohibited this ca_lotto_number from being saved:</h2>
+
+      <ul>
+      <% @ca_lotto_number.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :bonusNumber %><br />
+    <%= f.text_field :bonusNumber %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

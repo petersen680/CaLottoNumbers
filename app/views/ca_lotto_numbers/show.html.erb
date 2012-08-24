@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @ca_lotto_number.number %>
+</p>
+
+<p>
+  <b>Bonusnumber:</b>
+  <%= @ca_lotto_number.bonusNumber %>
+</p>
+
+
+<%= link_to 'Edit', edit_ca_lotto_number_path(@ca_lotto_number) %> |
+<%= link_to 'Back', ca_lotto_numbers_path %>
